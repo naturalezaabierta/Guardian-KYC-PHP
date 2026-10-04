@@ -1,0 +1,129 @@
+/* ========================================================================
+   Estilos para la Página de Verificación de Guardián KYC v1.0
+   ======================================================================== */
+
+/* --- Contenedor Principal de la Página --- */
+.guardian-kyc-page-content {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    text-align: center;
+}
+
+/* --- Títulos y Textos --- */
+.guardian-kyc-page-content h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.guardian-kyc-page-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* --- Checkboxes de Consentimiento --- */
+.guardian-kyc-page-content .guardian-kyc-consent-p {
+    text-align: left !important;
+    font-size: 14px !important;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el checkbox y el texto */
+    margin-bottom: 10px !important;
+    justify-content: flex-start;
+}
+
+.guardian-kyc-page-content .guardian-kyc-consent-p input[type="checkbox"] {
+    transform: scale(1.2); /* Hacer el checkbox un poco más grande */
+}
+
+/* --- Caja del Botón (Generada por el Shortcode) --- */
+#guardian-kyc-verification-container {
+    border: none !important;
+    padding: 0 !important;
+    margin-top: 25px;
+}
+
+#guardian-kyc-verification-container h4,
+#guardian-kyc-verification-container p {
+    display: none;
+}
+
+#guardian-kyc-start-verification-btn {
+    width: 100%;
+    font-size: 16px !important;
+    font-weight: bold;
+    padding: 12px 20px !important;
+    height: auto !important;
+    background-color: #007cba;
+    border-color: #007cba;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#guardian-kyc-start-verification-btn:hover:not(:disabled) {
+    background-color: #005a87;
+    border-color: #005a87;
+    transform: translateY(-2px);
+}
+
+#guardian-kyc-start-verification-btn:disabled {
+    background-color: #cccccc;
+    border-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#guardian-kyc-verification-status {
+    font-weight: 600;
+}
+
+/* ========================================================================
+   Diseño para Teléfonos (Responsivo)
+   ======================================================================== */
+@media (max-width: 600px) {
+    .guardian-kyc-page-content {
+        padding: 20px;
+        margin: 10px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .guardian-kyc-page-content h2 {
+        font-size: 22px;
+    }
+}
+
+/* ========================================================================
+   NUEVO: Estilos para el Ícono de Verificación
+   ======================================================================== */
+.guardian-kyc-verified-badge {
+    color: #007cba; /* Un azul que combine */
+    font-size: 0.9em;
+    cursor: help; /* Muestra un cursor de ayuda al pasar el ratón */
+    display: inline-block;
+    transform: translateY(-1px); /* Alineación vertical fina */
+}
+
+/* Estilos para el panel de administración de Guardián KYC */
+
+.guardian-kyc-balance-display {
+    font-size: 28px !important;
+    font-weight: 700 !important; /* 700 es 'bold' */
+    color: #2271b1; /* Un azul estándar de WordPress */
+    padding-top: 5px;
+}
+
+/* ===== Corrección para el Contenedor de la Página de Resultados ===== */
+.guardian-kyc-result-page-wrapper {
+    width: 100%;
+    clear: both; /* Limpia los flotantes por si acaso */
+    display: block; /* Asegura que ocupe su propio espacio */
+}

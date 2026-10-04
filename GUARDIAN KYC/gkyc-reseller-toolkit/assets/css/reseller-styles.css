@@ -1,0 +1,72 @@
+/* --- Estilos para el Kit de Reventa KYC v3.4 - Versión Unificada y Limpia --- */
+
+/* --- Contenedores Generales de Página --- */
+.gkyc-reseller-wrapper { text-align: center; margin: 40px auto; padding: 0 15px; }
+.gkyc-main-title { font-size: 2.5em; font-weight: 700; margin-bottom: 15px; color: #1d2327; }
+.gkyc-main-subtitle { font-size: 1.2em; color: #50575e; max-width: 700px; margin: 0 auto 40px auto; line-height: 1.6; }
+.gkyc-reseller-notice.error { padding: 15px 20px; margin: 20px auto; border-left: 5px solid #f5c6cb; border-radius: 4px; background-color: #f8d7da; color: #721c24; max-width: 600px; text-align: left; }
+
+/* --- Tabla de Precios de Licencias [gkyc_planes_venta] --- */
+.gkyc-pricing-table-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.gkyc-plan-card { background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 30px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,.05); transition: transform .3s ease, box-shadow .3s ease; display: flex; flex-direction: column; }
+.gkyc-plan-card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,.08); }
+.gkyc-plan-name { font-size: 1.5em; font-weight: 600; margin: 0 0 15px 0; color: #212529; }
+.gkyc-plan-price { font-size: 2.8em; font-weight: 700; margin: 0 0 20px 0; color: var(--gkyc-color-precio, #007cba); }
+.gkyc-plan-description { font-size: 1em; color: #6c757d; min-height: 60px; flex-grow: 1; line-height: 1.5; }
+.gkyc-plan-cta { margin-top: auto; padding-top: 20px; }
+
+/* --- Estilos de Botones Unificados --- */
+.gkyc-buy-button, .gkyc-payment-btn, .gkyc-submit-btn { display: block; width: 100%; padding: 15px; border: none; border-radius: 8px; color: #fff !important; font-size: 1.1em; font-weight: 700; text-decoration: none; text-align: center; cursor: pointer; transition: opacity .3s ease, transform .2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.1); box-sizing: border-box; }
+.gkyc-buy-button:hover, .gkyc-payment-btn:hover, .gkyc-submit-btn:hover { opacity: .9; transform: scale(1.02); }
+.gkyc-buy-button { display: inline-block; width: auto; padding: 14px 30px; background-color: var(--gkyc-color-boton, #007cba); }
+.gkyc-payment-btn.paypal { background-color: #00457c; }
+.gkyc-payment-btn.usdt { background-color: #26a17b; }
+.gkyc-payment-btn.whatsapp { background-color: #25d366; }
+.gkyc-submit-btn { background-color: #007cba; margin-top: 15px; }
+
+/* --- Regla para Ocultar el Botón Flotante --- */
+.gkyc-whatsapp-float { display: none !important; }
+
+
+/* --- ESTILOS UNIFICADOS PARA AMBAS CALCULADORAS Y CHECKOUT --- */
+
+/* Contenedor principal */
+.gkyc-checkout-wrapper, .gkyc-recharge-calculator { max-width: 600px; margin: 40px auto; position: relative; }
+.gkyc-checkout-wrapper .gkyc-partner-logo-container, .gkyc-recharge-calculator .gkyc-partner-logo-container { text-align: center; margin-bottom: 25px; }
+.gkyc-checkout-wrapper .gkyc-partner-logo, .gkyc-recharge-calculator .gkyc-partner-logo { max-width: 150px; height: auto; }
+
+/* Tarjeta principal */
+.gkyc-checkout-wrapper .gkyc-checkout-card, .gkyc-recharge-calculator .gkyc-checkout-card { background: #fff; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,.08); overflow: hidden; border: 1px solid #e9ecef; padding: 30px; text-align: left; }
+
+/* Títulos y Subtítulos */
+.gkyc-checkout-wrapper .gkyc-summary-title, .gkyc-recharge-calculator .gkyc-summary-title { text-align: center; margin: 0 0 10px 0; font-size: 1.6em; font-weight: 600; }
+.gkyc-checkout-wrapper .gkyc-summary-subtitle, .gkyc-recharge-calculator .gkyc-summary-subtitle { text-align: center; margin-top: 0; margin-bottom: 25px; color: #6c757d; }
+
+/* Formularios */
+.gkyc-checkout-wrapper .gkyc-form-field, .gkyc-recharge-calculator .gkyc-form-field { margin-bottom: 20px; }
+.gkyc-checkout-wrapper .gkyc-form-field label, .gkyc-recharge-calculator .gkyc-form-field label { display: block; font-weight: 600; margin-bottom: 8px; }
+.gkyc-checkout-wrapper .gkyc-form-field input, .gkyc-recharge-calculator .gkyc-form-field input { width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #ced4da; box-sizing: border-box; }
+
+/* Slider */
+.gkyc-checkout-wrapper .gkyc-slider, .gkyc-recharge-calculator .gkyc-slider {-webkit-appearance:none;width:100%;height:10px;border-radius:5px;background:#dee2e6;outline:none;margin-top:10px}
+.gkyc-checkout-wrapper .gkyc-slider::-webkit-slider-thumb, .gkyc-recharge-calculator .gkyc-slider::-webkit-slider-thumb {-webkit-appearance:none;appearance:none;width:25px;height:25px;border-radius:50%;background:#007cba;cursor:pointer}
+.gkyc-checkout-wrapper .gkyc-slider::-moz-range-thumb, .gkyc-recharge-calculator .gkyc-slider::-moz-range-thumb {width:25px;height:25px;border-radius:50%;background:#007cba;cursor:pointer}
+
+/* Totales y Detector de Plan */
+.gkyc-checkout-wrapper .gkyc-recharge-totals, .gkyc-recharge-calculator .gkyc-recharge-totals {margin-top:25px;padding-top:20px;border-top:1px solid #e9ecef}
+.gkyc-checkout-wrapper .gkyc-total-row, .gkyc-recharge-calculator .gkyc-total-row {display:flex;justify-content:space-between;font-size:1.2em;font-weight:bold;align-items:center}
+.gkyc-checkout-wrapper #gkyc-display-monto, .gkyc-recharge-calculator #gkyc-display-monto, .gkyc-checkout-wrapper #gkyc-display-monto-auto, .gkyc-recharge-calculator #gkyc-display-monto-auto {color:#007cba;font-size:1.3em;font-weight:700}
+.gkyc-checkout-wrapper #gkyc-display-verifications, .gkyc-recharge-calculator #gkyc-display-verifications, .gkyc-checkout-wrapper #gkyc-display-verifications-auto, .gkyc-recharge-calculator #gkyc-display-verifications-auto {text-align:right;font-weight:600;color:#555;font-size:.9em;margin-top:5px;min-height:1.2em}
+.gkyc-checkout-wrapper .gkyc-plan-detector, .gkyc-recharge-calculator .gkyc-plan-detector {font-weight:600;margin-top:8px;font-size:.9em}
+.gkyc-checkout-wrapper .gkyc-plan-detector.success, .gkyc-recharge-calculator .gkyc-plan-detector.success {color:#28a745}
+.gkyc-checkout-wrapper .gkyc-plan-detector.error, .gkyc-recharge-calculator .gkyc-plan-detector.error {color:#dc3545}
+
+/* Secciones de Pago y Soporte */
+.gkyc-checkout-wrapper .gkyc-payment-methods, .gkyc-recharge-calculator .gkyc-payment-methods, .gkyc-checkout-wrapper .gkyc-other-payments, .gkyc-recharge-calculator .gkyc-other-payments {margin-top:30px;padding:25px;background:#f8f9fa;border-radius:8px}
+.gkyc-checkout-wrapper .gkyc-payment-methods h3, .gkyc-recharge-calculator .gkyc-payment-methods h3, .gkyc-checkout-wrapper .gkyc-other-payments h3, .gkyc-recharge-calculator .gkyc-other-payments h3 {text-align:center;margin-top:0;margin-bottom:20px}
+.gkyc-checkout-wrapper .gkyc-payment-buttons, .gkyc-recharge-calculator .gkyc-payment-buttons {display:flex;flex-direction:column;gap:15px}
+.gkyc-checkout-wrapper .gkyc-payment-instructions, .gkyc-recharge-calculator .gkyc-payment-instructions {margin-top:25px;padding:20px;background:#e9ecef;border-radius:8px;font-size:.95em;line-height:1.6}
+.gkyc-checkout-wrapper .gkyc-wallet-address, .gkyc-recharge-calculator .gkyc-wallet-address {display:block;background:#fff;padding:10px;margin-top:10px;border-radius:4px;word-wrap:break-word;font-family:monospace}
+
+/* Logo de Garantía */
+.gkyc-guarantee-logo-fixed { display: block; max-width: 150px; margin-top: 25px; margin-left: auto; margin-right: auto; }

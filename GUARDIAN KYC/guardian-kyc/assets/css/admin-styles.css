@@ -1,0 +1,196 @@
+/* Estilos para el panel de administración de Guardián KYC */
+
+.guardian-kyc-balance-display {
+    font-size: 32px !important; /* Aumentamos el tamaño de la fuente */
+    font-weight: 700 !important; /* 'bold' */
+    color: #1d2327; /* Un color oscuro del panel de WP */
+    padding-top: 5px;
+    margin-bottom: 10px; /* Añadimos un poco de espacio debajo */
+}
+
+.gkyc-premium-text {
+    color: #8E44AD; /* Un color morado para 'Premium' */
+    font-weight: 700; /* Aseguramos que sea negrita */
+}
+
+/* ===== NUEVO: Estilos para las etiquetas de estado de usuario ===== */
+.gkyc-status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+.gkyc-status-badge.status-approved { background-color: #28a745; } /* Verde */
+.gkyc-status-badge.status-rejected { background-color: #dc3545; } /* Rojo */
+.gkyc-status-badge.status-declined { background-color: #ffc107; color: #212529; } /* Amarillo */
+.gkyc-status-badge.status-pending { background-color: #17a2b8; } /* Azul claro */
+.gkyc-status-badge.status-not-verified { background-color: #6c757d; } /* Gris */
+
+/* === Estilos para el Panel de Estadísticas GKYC === */
+
+.gkyc-stats-wrap .gkyc-kpi-cards {
+    display: grid;
+    /* ===== ¡ESTA ES LA LÍNEA MODIFICADA! ===== */
+    /* Se adapta automáticamente para que quepan las tarjetas (hasta 5 por fila en pantallas grandes) */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.gkyc-stats-wrap .gkyc-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 5px solid #2271b1; /* Azul de WordPress */
+}
+
+.gkyc-stats-wrap .gkyc-card.approved {
+    border-left-color: #28a745; /* Verde para aprobados */
+}
+
+.gkyc-stats-wrap .gkyc-card-title {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.gkyc-stats-wrap .gkyc-card-value {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+    color: #1d2327;
+}
+
+/* --- Responsivo para pantallas más pequeñas (esto ya no es necesario con el nuevo grid, pero no hace daño dejarlo) --- */
+@media screen and (max-width: 1200px) {
+    /* El grid auto-fit ya maneja esto, pero lo dejamos por si acaso */
+}
+
+@media screen and (max-width: 782px) {
+    /* El grid auto-fit ya maneja esto, pero lo dejamos por si acaso */
+}
+
+/* === Estilos para los Gráficos de Estadísticas === */
+
+.gkyc-charts-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* El gráfico de líneas ocupa 2/3 y el de pastel 1/3 */
+    gap: 20px;
+}
+
+.gkyc-chart-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.gkyc-chart-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.gkyc-chart-card.status-chart {
+    max-height: 400px;
+}
+
+
+/* --- Responsivo para los gráficos --- */
+@media screen and (max-width: 1200px) {
+    .gkyc-charts-container {
+        grid-template-columns: 1fr; /* Un gráfico encima del otro en pantallas pequeñas */
+    }
+    .gkyc-chart-card.status-chart {
+        max-height: none;
+    }
+}
+
+/* Nuevo estilo para la tarjeta de Saldo Consumido */
+.gkyc-stats-wrap .gkyc-card.consumed {
+    border-left-color: #f1c40f; /* Amarillo vibrante */
+}
+
+/* === Estilos para las Pestañas de la Página de Ajustes === */
+
+/* Contenedor de las pestañas */
+.wrap .nav-tab-wrapper {
+    margin-bottom: 25px;
+}
+
+/* Estilo de cada pestaña */
+.wrap .nav-tab {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 6px 6px 0 0;
+    background-color: #f0f0f1;
+    border-bottom: 1px solid #c8c8c8;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Estilo de la pestaña activa */
+.wrap .nav-tab-active,
+.wrap .nav-tab-active:hover {
+    background-color: #fff;
+    border-bottom-color: transparent;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+/* Estilo al pasar el ratón por una pestaña inactiva */
+.wrap .nav-tab:not(.nav-tab-active):hover {
+    background-color: #e0e0e0;
+}
+
+/* === Rediseño de la Página de Ajustes de GKYC === */
+
+/* Contenedor principal de las secciones de ajustes */
+.wrap form h2 {
+    font-size: 1.3em;
+    margin: 30px 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para cada campo de ajuste */
+.wrap .form-table th {
+    padding-left: 0;
+    width: 250px;
+}
+
+/* Reducir el tamaño del saldo y meterlo en una "tarjeta" */
+.guardian-kyc-balance-display {
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    color: #1d2327;
+    background-color: #f6f7f7;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0 !important;
+}
+
+/* Estilos para los radio buttons de los planes */
+#gkyc_plan_section fieldset p {
+    background-color: #f6f7f7;
+    padding: 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease-in-out;
+}
+#gkyc_plan_section fieldset p:hover {
+    border-color: #2271b1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+}
